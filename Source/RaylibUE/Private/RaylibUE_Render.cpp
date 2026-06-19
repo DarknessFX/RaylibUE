@@ -70,7 +70,7 @@ void FRaylibUEModule::RenderRaylibOverlay() {
           DrawCircleSectorLines(ToRayVector2(Cmd.Position), Cmd.Radius, Cmd.StartAngle, Cmd.EndAngle, Cmd.Segments, rlColor);
           break;
         case ERlDrawType::DrawCircleGradient:
-          DrawCircleGradient(Cmd.Position.X, Cmd.Position.Y, Cmd.Radius, rlColor1, rlColor2);
+          DrawCircleGradient(ToRayVector2(Cmd.Position), Cmd.Radius, rlColor1, rlColor2);
           break;
         case ERlDrawType::DrawCircleV:
           DrawCircleV(ToRayVector2(Cmd.Position), Cmd.Radius, rlColor);
